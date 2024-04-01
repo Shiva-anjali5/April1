@@ -35,9 +35,9 @@ pipeline {
             steps {
                 script {
                     // Run a container using the Docker image
-                    bat 'docker run -d --name my-container my-java-test-app'
+                    bat 'docker run -d --name my-container2 my-java-test-app'
                     // Fetch the output of the java script
-		                bat 'docker logs my-container'
+		                bat 'docker logs my-container2'
                 }
             }
         }

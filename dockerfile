@@ -1,5 +1,12 @@
-From openjdk:8
+
+
+FROM openjdk:8
+
 COPY . /SRC/JAVA
 WORKDIR /SRC/JAVA
-RUN ["javac", "JavaCiCd.java"]
-ENTRYPOINT ['java', 'JavaCiCd']
+
+# Compile the Java source code
+RUN javac JavaCiCd.java
+
+# Set the entrypoint to run the Java application
+ENTRYPOINT ["java", "JavaCiCd"]
